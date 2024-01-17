@@ -1,0 +1,264 @@
+.header {
+    display: flex;
+    gap: 10px 120px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    font-style: bold;
+
+    font-weight: bolder;
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+header a {
+    text-decoration: none;
+    color: #97b998;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover {
+
+    color: #387782;
+    transform: scale(1.05);
+}
+
+header .contato button {
+    padding: 5px 40px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #f3f3f4;
+    background-color: #1e517f;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #171f4e;
+
+}
+
+header .contato button:hover, form .btn-enviar input:hover {
+    box-shadow: 0 5px 8px #0f1642;
+    transform: scale(1.05);
+}
+
+.box {
+    display: flex;
+    gap: 150px;
+}
+
+h2.titulo {
+    color: #f3f3f4;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #4a98a5;
+
+}
+
+h1.nome {
+    color: #f3f3f4;
+}
+
+h1.nome span {
+    color: #387782;
+}
+
+.container {
+    margin-top: 180px;
+    margin-left: 160px;
+    height: 200px;
+    width: 520px;
+    padding: 15px;
+
+}
+
+.container h1 {
+    font-size: 2.5em;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    color: #f3f3f4;
+
+
+
+
+}
+
+.container p {
+    color: #f3f3f4;
+    font-size: 1.2em;
+    display: flex;
+    height: 150px;
+
+
+
+}
+
+body {
+    background-color: #2d3c42;
+}
+
+.imgBox img {
+    height: 530px;
+    width: 530px;
+    border-radius: 50%;
+    border: 3px solid #97b998;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+
+}
+
+.imgBox {
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 70px;
+    margin-right: 70px;
+
+}
+
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+.flex {
+    display: flex;
+}
+
+section.especialidades {
+    padding: 40px 4%;
+
+
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: #f3f3f4;
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 45px;
+    transition: .2s;
+
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #f3f3f454;
+}
+
+.especialidades .especialidades-box i {
+    font-size: 70px;
+    color: #97b998;
+
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+/* ESTILO PORTIFOLIO */
+section.portfolio{
+    padding:  80px 4%;
+    box-shadow: 0 0 40px 10px #f3f3f415;
+}
+section.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 4s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+.img-port:hover{
+    background-position: 100% 100%;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000009c;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #f3f3f4;
+    opacity: 0;
+    transition: .5s;
+}
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO FORMULARIO DE CONTATO */
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+form input, form textarea{
+    width: 100%;
+    background-color: #434744;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #f3f3f4;
+    font-size: 18px;
+}
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+form .btn-enviar input{
+    width: 120px;
+    background-color: #1e517f;
+    color: #f3f3f4;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #171f4e;
+    transition: .2s;
+
+}
