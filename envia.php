@@ -1,5 +1,5 @@
 <?php
-    require_once 'config.php';
+    
 
     $nome = $_POST['nome'];
     $email = $_POST['email'];
@@ -25,10 +25,9 @@
 
 
     if($smtp->execute()){
-        echo ("Mensagem enviada com sucesso!");
+        echo("Mensagem enviada com sucesso!");
     }else{
-        echo ("Erro no envio da mensagem: ").$smtp->error;
+        echo("Erro no envio da mensagem: ").$smtp->error;
     }
     $smtp->close();
     $conn->close();
-?>
