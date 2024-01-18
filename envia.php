@@ -30,6 +30,8 @@
     $smtp = $conn->prepare("INSERT INTO mensagens (nome, email, telefone, mensagem, data, hora) VALUES (?, ?, ?, ?, ?, ?)");
     $smtp-> bind_param("ssssss",$nome, $email, $telefone, $mensagem, $data_atual, $hora_atual);
 
+    
+
     if($smtp->execute()){
         echo ("Mensagem enviada com sucesso!");
     }else{
