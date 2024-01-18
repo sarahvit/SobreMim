@@ -8,14 +8,6 @@
     $data_atual = date('d/m/Y'); //18/01/2024
     $hora_atual = date('H:i:s');
 
-    // $para = "sasavit0700@gmail.com";
-    // $assunto = "Coleta de dados - Portifólio";
-
-    // $corpo = "Nome: ".$nome."\r\n"."E-mail ".$email."\r\n"."Telefone: ".$telefone."\r\n"."Mensagem: ".$mensagem;
-
-    // $cabeca = "From: teste@portfolio.com"."\n"."Reply-to: ".$email."\n"."X=Mailer:PHP/".phpversion();
-
-
     $server = 'localhost';
     $usuario = 'root';
     $senha = '';
