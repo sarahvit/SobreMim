@@ -31,9 +31,9 @@
     $smtp-> bind_param("ssssss",$nome, $email, $telefone, $mensagem, $data_atual, $hora_atual);
 
     if($smtp->execute()){
-        echo "Mensagem enviada com sucesso!";
+        echo ("Mensagem enviada com sucesso!");
     }else{
-        echo "Erro no envio da mensagem: ".$smtp->error;
+        echo ("Erro no envio da mensagem: ").$smtp->error;
     }
     $smtp->close();
     $conn->close();
