@@ -16,12 +16,12 @@
     // $cabeca = "From: teste@portfolio.com"."\n"."Reply-to: ".$email."\n"."X=Mailer:PHP/".phpversion();
 
 
-    $server = 'localhost';
-    $usuario = 'root';
-    $senha = '';
-    $banco = 'formulario_portifolio';
+    // $server = 'localhost';
+    // $usuario = 'root';
+    // $senha = '';
+    // $banco = 'formulario_portifolio';
 
-    $conn = new mysqli($server, $usuario, $senha, $banco);
+    // $conn = new mysqli($server, $usuario, $senha, $banco);
 
     //VERIFICAR CONEXAO
     if($conn->connect_error){
