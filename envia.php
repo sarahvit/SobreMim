@@ -1,9 +1,10 @@
 <?php
+    require_once 'config.php';
 
-    $nome = addslashes($_POST['nome']);
-    $email = addslashes($_POST['email']);
-    $telefone = addslashes($_POST['telefone']);
-    $mensagem = addslashes($_POST['mensagem']);
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $mensagem = $_POST['mensagem'];
     $data_atual = date('d/m/Y'); //18/01/2024
     $hora_atual = date('H:i:s');
 
@@ -27,10 +28,9 @@
         die("Falha ao se comunicar com banco de dados: ".$conn->connect_error);
     }
 
-    $smtp = $conn->prepare("INSERT INTO mensagens (nome, email, telefone, mensagem, data, hora) VALUES (?, ?, ?, ?, ?, ?)");
+    $smtp = $conn->prepare("INSERT INTO mensagens (nome, email, telefone, mensagem, data, hora) VALUES (?,?,?,?,?,?)");
     $smtp-> bind_param("ssssss",$nome, $email, $telefone, $mensagem, $data_atual, $hora_atual);
 
-    
 
     if($smtp->execute()){
         echo ("Mensagem enviada com sucesso!");
