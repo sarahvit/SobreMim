@@ -39,7 +39,8 @@ header .contato button {
 
 }
 
-header .contato button:hover, form .btn-enviar input:hover {
+header .contato button:hover,
+form .btn-enviar input:hover {
     box-shadow: 0 5px 8px #0f1642;
     transform: scale(1.05);
 }
@@ -177,16 +178,19 @@ section.especialidades .flex {
     font-size: 28px;
     margin: 15px 0;
 }
+
 /* ESTILO PORTIFOLIO */
-section.portfolio{
-    padding:  80px 4%;
+section.portfolio {
+    padding: 80px 4%;
     box-shadow: 0 0 40px 10px #f3f3f415;
 }
-section.portfolio .flex{
+
+section.portfolio .flex {
     justify-content: space-around;
     margin-top: 60px;
 }
-.img-port{
+
+.img-port {
     width: 360px;
     height: 460px;
     background-size: cover;
@@ -196,10 +200,12 @@ section.portfolio .flex{
     border-radius: 40px;
     position: relative;
 }
-.img-port:hover{
+
+.img-port:hover {
     background-position: 100% 100%;
 }
-.overlay{
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -216,16 +222,17 @@ section.portfolio .flex{
     opacity: 0;
     transition: .5s;
 }
-.overlay:hover{
+
+.overlay:hover {
     opacity: 1;
 }
 
 /* ESTILO FORMULARIO DE CONTATO */
-section.formulario{
+section.formulario {
     padding: 80px 4%;
 }
 
-form{
+form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
@@ -234,7 +241,9 @@ form{
     gap: 10px;
     margin-top: 40px;
 }
-form input, form textarea{
+
+form input,
+form textarea {
     width: 100%;
     background-color: #434744;
     border: 0;
@@ -244,15 +253,18 @@ form input, form textarea{
     color: #f3f3f4;
     font-size: 18px;
 }
-form textarea{
+
+form textarea {
     resize: none;
     max-height: 200px;
 }
-form .btn-enviar{
+
+form .btn-enviar {
     margin-top: 20px;
     text-align: center;
 }
-form .btn-enviar input{
+
+form .btn-enviar input {
     width: 120px;
     background-color: #1e517f;
     color: #f3f3f4;
@@ -261,4 +273,19 @@ form .btn-enviar input{
     box-shadow: 0 4px 0 #171f4e;
     transition: .2s;
 
+}
+
+.mensagens {
+    flex-flow: column;
+    background-color: #0f1642;
+    color: #f3f3f4;
+    display: flex;
+    padding: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 30px;
+    align-items: center;
+    border-radius: 15px;
+    border: 0.5px solid #f3f3f4;
+    
 }

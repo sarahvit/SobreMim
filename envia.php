@@ -1,25 +1,15 @@
 <?php
-    
+    require_once'config.php';
 
+    date_default_timezone_set('America/Sao_Paulo');
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $mensagem = $_POST['mensagem'];
     $data_atual = date('d/m/Y'); //18/01/2024
     $hora_atual = date('H:i:s');
-
-    $server = 'localhost';
-    $usuario = 'root';
-    $senha = '';
-    $banco = 'formulario_portifolio';
-
-    $conn = new mysqli($server, $usuario, $senha, $banco);
-
-    //VERIFICAR CONEXAO
-    if($conn->connect_error){
-        die("Falha ao se comunicar com banco de dados: ".$conn->connect_error);
-    }
-
+    
+    //PREPARAR COMANDO
     $smtp = $conn->prepare("INSERT INTO mensagens (nome, email, telefone, mensagem, data, hora) VALUES (?,?,?,?,?,?)");
     $smtp-> bind_param("ssssss",$nome, $email, $telefone, $mensagem, $data_atual, $hora_atual);
 
@@ -31,3 +21,5 @@
     }
     $smtp->close();
     $conn->close();
+
+?>
