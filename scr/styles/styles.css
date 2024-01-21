@@ -44,7 +44,71 @@ form .btn-enviar input:hover {
     box-shadow: 0 5px 8px #0f1642;
     transform: scale(1.05);
 }
+/* ESTILO MENU MOBILE */
 
+.btn-abrir-menu i{
+    font-size: 40px;
+    color: #f3f3f4;
+    display: flex;
+    justify-content: right;
+    padding: 10px;
+}
+.menu-mobile{
+    background-color: #1f262b;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+    
+}
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+.btn-abrir-menu{
+    display: none;
+}
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+.menu-mobile .btn-fechar i{
+    color: #749075;
+    font-size: 30px;
+}
+.menu-mobile nav {
+    text-align: right;
+    
+}
+.menu-mobile nav a {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    padding-right: 20px;
+    display: block;
+    
+}
+.menu-mobile nav a:hover{
+    background-color: #5c785d ;
+    color: #000000;
+}
+.overlay-menu{
+    background-color: #000000d0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+/* CORPO DO SITE */
 .box {
     display: flex;
     gap: 150px;
@@ -66,7 +130,8 @@ h1.nome {
 }
 
 h1.nome span {
-    color: #387782;
+    gap: 10px;
+    color: #5c785d;
 }
 
 .container {
@@ -76,13 +141,14 @@ h1.nome span {
     width: 520px;
     padding: 15px;
 
+
 }
 
 .container h1 {
     font-size: 2.5em;
     padding-bottom: 5px;
     margin-bottom: 30px;
-    display: flex;
+    
     align-items: center;
     color: #f3f3f4;
 
@@ -109,7 +175,7 @@ body {
     height: 530px;
     width: 530px;
     border-radius: 50%;
-    border: 3px solid #97b998;
+    border: 3px solid #5c785d;
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 
@@ -118,7 +184,7 @@ body {
 
 .imgBox {
     margin-top: 50px;
-    flex-wrap: nowrap;
+    
     flex-direction: row;
     align-items: center;
     display: flex;
@@ -170,7 +236,7 @@ section.especialidades .flex {
 
 .especialidades .especialidades-box i {
     font-size: 70px;
-    color: #97b998;
+    color: #7e967f;
 
 }
 
@@ -287,5 +353,162 @@ form .btn-enviar input {
     align-items: center;
     border-radius: 15px;
     border: 0.5px solid #f3f3f4;
+
+
+}
+
+/* ESTILO RODAPE */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #f3f3f415;
+}
+
+footer .flex {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+footer .btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+    color: #ffffff;
+    background-color: #5c785d;
+}
+
+footer .btn-social button:hover {
+    box-shadow: 0 3px 2px #0f1642;
+    transform: scale(1.05);
+
+}
+
+footer .line-footer {
+    padding: 10px 0;
+
+}
+
+.borda {
+    border-top: 2px solid #4a98a5;
+}
+
+footer .line-footer p i {
+    color: #4a98a5;
+    font-size: 22px;
+
+
+}
+
+footer .line-footer p a {
+    color: #f3f3f4;
+
+
+}
+
+@media screen and (max-width: 1318px) {
+    .btn-abrir-menu{
+        display: block;
+    }
+    .nome {
+        display: flex;
+        
+    }
+
+    .box {
+        gap: 15px;
+        margin-bottom: 200px;
+        align-items: center;
+        flex-direction: column-reverse;
+
+    }
+
+    .especialidades-box {
+        margin-top: 10px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+
+    }
     
+    .container {
+        margin-top: 5px;
+        width: 100%;
+        margin: 0 auto;
+        
+        
+    }
+
+    .container h1 {
+        font-size: 32px;
+
+    }
+
+    h1.nome {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .imgBox {
+        padding-top: 15px;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .imgBox img {
+    height: 100%;
+    width: 100%;
+    max-width: 360px;
+    
+
+    }
+
+    /* CABECALHO */
+    .header {
+        display: none;
+        
+    }
+
+    section.especialidades {
+        padding: 40px 8%;
+        
+
+
+    }
+    .img-port {
+        width: 100%;
+        height: 460px;
+        max-width: 360px;
+        margin: 0 auto;
+
+    }
+    section.portfolio .flex{
+        gap:60px;
+    }
+    footer .line-footer {
+        text-align: center;
+        
+    }
+    footer .flex{
+        gap: 30px;
+    }
 }
